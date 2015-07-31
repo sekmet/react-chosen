@@ -8,11 +8,21 @@
     },
 
     handleChange: function(a, b, c) {
-      // force the update makes it so that we reset chosen to whatever
-      // controlled value the parent dictated
-      this.forceUpdate();
-      this.props.onChange && this.props.onChange(a, b, c);
-    },
+    // force the update makes it so that we reset chosen to whatever
+    // controlled value the parent dictated
+    this.forceUpdate();
+    var originalSelect = $(this.refs.select.getDOMNode());
+    this.setState({
+      value: originalSelect
+      .children('option:selected')
+      .map(function(element, index) {
+        return element.value;
+      })
+      .toArray()
+    });
+    this.props.onChange && this.props.onChange();
+  },
+
 
     componentDidMount: function() {
       var props = this.props;
