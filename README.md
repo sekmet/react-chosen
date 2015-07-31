@@ -51,6 +51,23 @@ React.renderComponent(
 , document.body);
 ```
 
+## Configuration and accepted props
+
+```javascript allowSingleDeselect```,
+```disableSearch```,
+```disableSearchThreshold ```,
+``` enableSplitWordSearch ```,
+```inheritSelectClasses```,
+```maxSelectedOptions```,
+```noResultsText```,
+```placeholderTextMultiple```,
+```placeholderTextSingle```,
+```searchContains```,
+```singleBackstrokeDelete```,
+```width```,
+```displayDisabledOptions```,
+```displaySelectedOptions```,
+
 ## License
 
 MIT.
