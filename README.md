@@ -53,20 +53,20 @@ React.renderComponent(
 
 ## Configuration and accepted props
 
-```javascript allowSingleDeselect```,
-```disableSearch```,
-```disableSearchThreshold ```,
-``` enableSplitWordSearch ```,
-```inheritSelectClasses```,
-```maxSelectedOptions```,
-```noResultsText```,
-```placeholderTextMultiple```,
-```placeholderTextSingle```,
-```searchContains```,
-```singleBackstrokeDelete```,
-```width```,
-```displayDisabledOptions```,
-```displaySelectedOptions```,
+``` allowSingleDeselect ``` ,
+``` disableSearch ``` ,
+``` disableSearchThreshold ``` ,
+``` enableSplitWordSearch ``` ,
+``` inheritSelectClasses``` ,
+``` maxSelectedOptions ``` ,
+``` noResultsText ``` ,
+``` placeholderTextMultiple ``` ,
+``` placeholderTextSingle ``` ,
+``` searchContains ``` ,
+``` singleBackstrokeDelete ``` ,
+``` width ``` ,
+``` displayDisabledOptions ``` ,
+``` displaySelectedOptions ``` ,
 
 ## License
 
