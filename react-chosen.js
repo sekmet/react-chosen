@@ -7,25 +7,24 @@
       $(this.refs.select.getDOMNode()).trigger('chosen:updated');
     },
 
-    handleChange: function(a, b, c) {
-    // force the update makes it so that we reset chosen to whatever
-    // controlled value the parent dictated
-    this.forceUpdate();
-    console.log(a);
-    var options = a.target.select;
-    var selected = options.map(function(option) {
-        option.selected === true ? option.value : undefined
-      });
+  handleChange: function(a, b, c) {
+  // force the update makes it so that we reset chosen to whatever
+  // controlled value the parent dictated
+  this.forceUpdate();
+  var options = a.target.options;
+  var valuesSelected = [];
+    for (var i = 0, l = options.length; i < l; i++) {
+      if (options[i].selected) {
+        valuesSelected.push(options[i].value);
+      }
+    }
 
-    console.log(options);
-    conosole.log(selected);
-
-    this.setState({
-      value: selected
-    });
-
-    this.props.onChange && this.props.onChange(selected);
-  },
+  this.setState({
+    value: valuesSelected
+  });
+  //return array of values selected
+  this.props.onChange && this.props.onChange(valuesSelected);
+},
 
 
     componentDidMount: function() {
