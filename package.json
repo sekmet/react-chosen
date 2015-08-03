@@ -12,23 +12,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chenglou/react-chosen.git"
+    "url": "https://github.com/rolandsusans/react-chosen.git"
   },
   "keywords": [
-    "facebook",
     "react",
     "chosen",
-    "harvest",
     "select",
     "dropdown",
-    "wrapper"
+    "wrapper",
+    "select",
+    "multiselect"
   ],
-  "author": "chenglou <chenglou92@gmail.com>",
+  "author": "rolandsusans rolands.usans@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chenglou/react-chosen/issues"
+    "url": "https://github.com/rolandsusans/react-chosen/issues"
   },
-  "homepage": "https://github.com/chenglou/react-chosen",
+  "homepage": "https://github.com/rolandsusans/react-chosen",
   "dependencies": {
     "drmonty-chosen": "~1.4.2",
     "jquery": "^2.1.1",
