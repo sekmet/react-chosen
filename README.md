@@ -28,10 +28,10 @@ Please refer to [Chosen](http://harvesthq.github.io/chosen/)'s API. It's pretty 
 
 - Every Chosen option employs camelCase, e.g. disable_search_threshold -> disableSearchThreshold.
 
-- Just like React's [controlled component](http://facebook.github.io/react/docs/forms.html#controlled-components), `value` controls your select and makes it immune to changes unless you specify so.
+- Or see Configuration and accepted props
 
 ## Example
-
+###Basic example
 ```html
 /** @jsx React.DOM */
 React.renderComponent(
@@ -49,6 +49,94 @@ React.renderComponent(
     <option value="Harvest">Harvest</option>
   </Chosen>
 , document.body);
+```
+###Creating your own component:
+```javascript
+
+var React = require('react');
+var Chosen = require('react-chosen-r');
+
+const SINGLE = 'single';
+const MULTIPLE = 'multiple';
+
+/**
+ * React class that renders each option
+ */
+var Option = React.createClass({
+    render: function(){
+       return (
+           <option  key={this.props.value} value={this.props.value}> {this.props.label} </option>
+       );
+   }
+});
+var ChosenComponent = React.createClass({
+    getInitialState: function (){
+        return {
+            chosenType: this.props.chosenType,
+        };
+    },
+    /**
+     * This method is called when value is selected by user
+     * @param selected
+     */
+    handleSelect:function(selected){
+      this.props.handleChange(selected);
+    },
+    /**
+     * According to @see this.state.chosenType
+     * renders multiple or single choise component
+     *
+     * @param options
+     * @param valueSelected
+     * @returns {XML}
+     */
+    renderChosen: function(options, valueSelected){
+            if(this.state.chosenType == SINGLE){
+                return (
+                    <Chosen defaultValue={valueSelected} onChange={this.handleSelect}  >
+                        {options.map(function (option) {
+                            return (
+                                <Option key={option.value} value={option.value} label={option.label}/>
+                            )
+                        }, this)}
+                    </Chosen>
+                );
+            }else if(this.state.chosenType == MULTIPLE){
+                return (
+                    <Chosen defaultValue={valueSelected}
+                    placeholderTextMultiple={this.props.placeholderTextMultiple} 
+                    onChange={this.handleSelect} 
+                    ref={'reactChosen'} 
+                    multiple 
+                   >
+                        {options.map(function (option) {
+                            return (
+                                <Option key={option.value} 
+                                value={option.value} 
+                                label={option.label}
+                                />
+                            )
+                        }, this)}
+                    </Chosen>
+                );
+        }
+    },
+    /**
+     * Render chosen drop down menu
+     * @returns {XML}
+     */
+    render: function () {
+        var options = this.props.options;
+        var valueSelected = this.props.value;
+        return (
+            <div>
+                {this.renderChosen(options,valueSelected)}
+            </div>
+        );
+    }
+});
+
+module.exports = ChosenComponent;
 ```
 
 ## Configuration and accepted props
