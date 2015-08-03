@@ -53,20 +53,23 @@ React.renderComponent(
 
 ## Configuration and accepted props
 
-``` allowSingleDeselect ``` ,
-``` disableSearch ``` ,
-``` disableSearchThreshold ``` ,
-``` enableSplitWordSearch ``` ,
-``` inheritSelectClasses``` ,
-``` maxSelectedOptions ``` ,
-``` noResultsText ``` ,
-``` placeholderTextMultiple ``` ,
-``` placeholderTextSingle ``` ,
-``` searchContains ``` ,
-``` singleBackstrokeDelete ``` ,
-``` width ``` ,
-``` displayDisabledOptions ``` ,
-``` displaySelectedOptions ``` ,
+
+| Prop  | Accepted values  | Description |
+| :------------ |:---------------:| -----:|
+|  allowSingleDeselect | boolean | When a single select box isn't a required field, you allowSingleDeselect: true and Chosen will add a UI element for option deselection. This will only work if the first option has blank text. |
+|  disableSearch | boolean | allow to search values |
+|  disableSearchThreshold | integer  |  The disableSearchThreshold option can be specified to hide the search input on single selects if there are fewer than (n) options. |
+|  enableSplitWordSearch | boolean| by setting true, Chosen will try to search in every word seperated by space |
+|  inheritSelectClasses  |  boolean  | inheritSelectClasses   |
+|  maxSelectedOptions  |  integer  |  number of selections, that can be selected in multiple selection  |
+|  noResultsText  |  string  |  string to be displayed when no search result  |
+|  placeholderTextMultiple  |  string  |  placeholder when no options are selected, Chosen multiple values  |
+|  placeholderTextSingle  |  string  |   placeholder when no options are selected, Chosen single   |
+|  searchContains  |  boolean  | default false   |
+|  singleBackstrokeDelete  |  boolean  |  by setting true you enable deleting options by pressing backspace  |
+|  width  |  string  |  you can specify width of element  |
+|  displayDisabledOptions  |  boolean  |  show disabled options in drop down  |
+|  displaySelectedOptions | boolean  | show selected options in drop down |
 
 ## License
 
