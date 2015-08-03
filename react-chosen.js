@@ -28,7 +28,10 @@
                 $(chosen.getDOMNode()).trigger('chosen:updated');
             }
         },
-
+        /*****************************************
+         * This method returns array of selected
+         * values
+         ****************************************/
         handleChange: function (a, b, c) {
             // force the update makes it so that we reset chosen to whatever
             // controlled value the parent dictated
@@ -40,15 +43,15 @@
                     valuesSelected.push(options[i].value);
                 }
             }
-
-            this.setState({
-                value: valuesSelected
-            });
-            //return array of values selected
+            //return array of values selected, to onChange callback function
             this.props.onChange && this.props.onChange(valuesSelected);
         },
 
-
+        /*****************************************
+         * This method initialize chosen for
+         * DOM node, maps react-chosen-r props
+         * with original chosen
+         ****************************************/
         componentDidMount: function () {
             var props = this.props;
             var select = $(this.refs.select.getDOMNode());
