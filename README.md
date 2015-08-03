@@ -142,22 +142,22 @@ module.exports = ChosenComponent;
 ## Configuration and accepted props
 
 
-| Prop  | Accepted values  | Description |
+| Prop  | Default  | Description |
 | :------------ |:---------------:| :-------|
-|  allowSingleDeselect | boolean | When a single select box isn't a required field, you allowSingleDeselect: true and Chosen will add a UI element for option deselection. This will only work if the first option has blank text. |
-|  disableSearch | boolean | allow to search values |
-|  disableSearchThreshold | integer  |  The disableSearchThreshold option can be specified to hide the search input on single selects if there are fewer than (n) options. |
-|  enableSplitWordSearch | boolean| by setting true, Chosen will try to search in every word seperated by space |
-|  inheritSelectClasses  |  boolean  | inheritSelectClasses   |
-|  maxSelectedOptions  |  integer  |  number of selections, that can be selected in multiple selection  |
-|  noResultsText  |  string  |  string to be displayed when no search result  |
-|  placeholderTextMultiple  |  string  |  placeholder when no options are selected, Chosen multiple values  |
-|  placeholderTextSingle  |  string  |   placeholder when no options are selected, Chosen single   |
-|  searchContains  |  boolean  | default false   |
-|  singleBackstrokeDelete  |  boolean  |  by setting true you enable deleting options by pressing backspace  |
-|  width  |  string  |  you can specify width of chosen component  |
-|  displayDisabledOptions  |  boolean  |  show disabled options in drop down  |
-|  displaySelectedOptions | boolean  | show selected options in drop down |
+|  allowSingleDeselect | *false*| When set to true on a single select, Chosen adds a UI element which selects the first element (if it is blank). |
+|  disableSearch | *false* | When set to true, Chosen will not display the search field (single selects only). |
+|  disableSearchThreshold | *0*  |  THide the search input on single selects if there are fewer than (n) options. |
+|  enableSplitWordSearch | *true* | By default, searching will match on any word within an option tag. Set this option to false if you want to only match on the entire text of an option tag. |
+|  inheritSelectClasses  |  *false*  | When set to true, Chosen will grab any classes on the original select field and add them to Chosen’s container div.   |
+|  maxSelectedOptions  |  *Infinity*  |  Limits how many options the user can select. When the limit is reached, the chosen:maxselected event is triggered. |
+|  noResultsText  | *"No results match"*  |  The text to be displayed when no matching results are found. The current search is shown at the end of the text (e.g., No results match "Bad Search").  |
+|  placeholderTextMultiple  |  *"Select Some Options"* |  The text to be displayed as a placeholder when no options are selected for a multiple select.  |
+|  placeholderTextSingle  | *"Select an Option"* |  The text to be displayed as a placeholder when no options are selected for a single select.   |
+|  searchContains  | *false*  | By default, Chosen’s search matches starting at the beginning of a word. Setting this option to true allows matches starting from anywhere within a word. This is especially useful for options that include a lot of special characters or phrases in ()s and []s.   |
+|  singleBackstrokeDelete  |  *true*  |  By default, pressing delete/backspace on multiple selects will remove a selected choice. When false, pressing delete/backspace will highlight the last choice, and a second press deselects it.|
+|  width  | *Original select width.* |  The width of the Chosen select box. By default, Chosen attempts to match the width of the select box you are replacing. If your select is hidden when Chosen is instantiated, you must specify a width or the select will show up with a width of 0.  |
+|  displayDisabledOptions  |  *true*  |  By default, Chosen includes selected options in search results with a special styling. Setting this option to false will hide selected results and exclude them from searches. Note - this is for *multiple selects only*. In single selects, the selected result will always be displayed.  |
+|  displaySelectedOptions | *true*  | By default, Chosen only shows the text of a selected option. Setting this option to true will show the text and group (if any) of the selected option. |
 
 ## License
 
