@@ -1,7 +1,7 @@
 # React-chosen
 
 [React](http://facebook.github.io/react/) wrapper for [Chosen](http://harvesthq.github.io/chosen/) jQuery.
-
+This project is inspired by: [chenglou/react-chosen](https://github.com/chenglou/react-chosen)
 ## install
 
 ```sh
