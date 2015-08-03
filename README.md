@@ -5,7 +5,7 @@
 ## install
 
 ```sh
-bower install react-chosen
+bower install react-chosen-r
 ```
 
 Or simply drop the script somewhere on your page (after React and Chosen of course):
@@ -17,7 +17,7 @@ Or simply drop the script somewhere on your page (after React and Chosen of cour
 The npm build works, but unfortunately not well:
 
 ```sh
-npm install react-chosen
+npm install react-chosen-r
 ```
 
 Due to the awkwardness of Chosen and jQuery on npm, you'll still have to include jQuery as a global dependency. Installing via npm is not recommended.
