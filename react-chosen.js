@@ -11,23 +11,18 @@
     // force the update makes it so that we reset chosen to whatever
     // controlled value the parent dictated
     this.forceUpdate();
-    console.log("a");
-    console.log(a);
-    console.log("b");
-    console.log(b);
-    console.log("c");
-    console.log(c);
-    var originalSelect = $(this.refs.select.getDOMNode());
-    var selected =  originalSelect
-      .children('option:selected')
-      .map(function(element, index) {
-        return element.value;
-      })
-      .toArray();
+    var options = a.target.select;
+    var selected = options.map(function(option) {
+        option.selected === true ? option.value : undefined
+      });
+
+    console.log(options);
+    conosole.log(selected);
 
     this.setState({
       value: selected
     });
+
     this.props.onChange && this.props.onChange(selected);
   },
 
