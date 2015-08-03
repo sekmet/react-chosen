@@ -12,15 +12,16 @@
     // controlled value the parent dictated
     this.forceUpdate();
     var originalSelect = $(this.refs.select.getDOMNode());
-    this.setState({
-      value: originalSelect
+    var selected =  originalSelect
       .children('option:selected')
       .map(function(element, index) {
         return element.value;
       })
-      .toArray()
+      .toArray();
+    this.setState({
+      value: selected
     });
-    this.props.onChange && this.props.onChange();
+    this.props.onChange && this.props.onChange(selected);
   },
 
 
