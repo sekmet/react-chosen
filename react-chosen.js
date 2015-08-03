@@ -15,7 +15,7 @@
     console.log(a);
     console.log("b");
     console.log(b);
-    conosle.log("c");
+    console.log("c");
     console.log(c);
     var originalSelect = $(this.refs.select.getDOMNode());
     var selected =  originalSelect
