@@ -11,6 +11,9 @@
     // force the update makes it so that we reset chosen to whatever
     // controlled value the parent dictated
     this.forceUpdate();
+    console.log(a);
+    console.log(b);
+    cosnsole.log(c);
     var originalSelect = $(this.refs.select.getDOMNode());
     var selected =  originalSelect
       .children('option:selected')
@@ -18,6 +21,7 @@
         return element.value;
       })
       .toArray();
+
     this.setState({
       value: selected
     });
