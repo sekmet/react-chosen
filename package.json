@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/rolandsusans/react-chosen/issues"
   },
-  "homepage": "https://github.com/rolandsusans/react-chosen",
+  "homepage": "https://github.com/rolandsusans",
   "dependencies": {
     "drmonty-chosen": "~1.4.2",
     "jquery": "^2.1.1",
