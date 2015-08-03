@@ -1,6 +1,6 @@
 {
   "name": "react-chosen",
-  "version": "0.3.9",
+  "version": "0.3.10",
   "description": "React wrapper for Chosen jQuery.",
   "main": "react-chosen.js",
   "ignore": [
