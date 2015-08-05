@@ -31,6 +31,8 @@ Please refer to [Chosen](http://harvesthq.github.io/chosen/)'s API. It's pretty 
 - Or see Configuration and accepted props
 
 ## Example
+[jsfiddle-example](https://jsfiddle.net/69z2wepo/13354/)
+
 ###Basic example
 ```html
 /** @jsx React.DOM */
@@ -50,6 +52,7 @@ React.renderComponent(
   </Chosen>
 , document.body);
 ```
+
 ###Creating your own component:
 ```javascript
 
