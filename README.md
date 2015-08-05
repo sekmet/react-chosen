@@ -31,7 +31,7 @@ Please refer to [Chosen](http://harvesthq.github.io/chosen/)'s API. It's pretty 
 - Or see Configuration and accepted props
 
 ## Example
-[jsfiddle-example](https://jsfiddle.net/69z2wepo/13354/)
+[jsfiddle-example](https://jsfiddle.net/69z2wepo/13361/)
 
 ###Basic example
 ```html
