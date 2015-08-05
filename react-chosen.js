@@ -18,6 +18,26 @@
             }
         },
 
+        /**************************************************
+         *  this method close chosen dropdown
+         *************************************************/
+        openChosen: function () {
+            var chosen = this.refs.select;
+            if (chosen != undefined) {
+                $(chosen.getDOMNode()).trigger('chosen:open');
+            }
+        },
+
+        /**************************************************
+         *  this method close chosen dropdown
+         *************************************************/
+        closeChosen: function () {
+            var chosen = this.refs.select;
+            if (chosen != undefined) {
+                $(chosen.getDOMNode()).trigger('chosen:close');
+            }
+        },
+
         /*************************************
          *  this method trigers react chosen
          *  update event
