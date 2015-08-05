@@ -1,6 +1,6 @@
 {
-  "name": "react-chosen",
-  "version": "0.3.8",
+  "name": "react-chosen-r",
+  "version": "1.0.1",
   "author": "chenglou <chenglou92@gmail.com>",
   "description": "React wrapper for Chosen jQuery.",
   "main": "react-chosen.js",
@@ -9,7 +9,8 @@
     "node_modules",
     "components",
     "bower_components",
-    "test"
+    "test",
+    "tests"
   ],
   "keywords": [
     "facebook",
@@ -25,5 +26,9 @@
     "jquery": "~2.1.0",
     "react": "~0.13.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://github.com/rolandsusans/react-chosen",
+  "authors": [
+    "Rolands Usans <rolands.usans@gmail.com>"
+  ]
 }
